@@ -1165,7 +1165,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1465% or approximately 1/683"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1464% or approximately 1/683"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
               <Events>
@@ -1177,7 +1177,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1221% or approximately 1/819"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.122% or approximately 1/820"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
               <Events>
@@ -1189,7 +1189,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1219% or approximately 1/820"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.122% or approximately 1/820"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
               <Events>
@@ -1401,7 +1401,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1953% or approximately 1/512"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1951% or approximately 1/512"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
@@ -1414,7 +1414,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1709% or approximately 1/585"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.1708% or approximately 1/586"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
@@ -1427,7 +1427,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="staticButtonGroup"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.3655% or approximately 1/274"/>
+                <Property name="text" type="java.lang.String" value="Shiny Chance = 0.3656% or approximately 1/274"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>

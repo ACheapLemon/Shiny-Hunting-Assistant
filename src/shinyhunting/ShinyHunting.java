@@ -852,7 +852,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(staticMasuda6);
-        staticMasuda6.setText("Shiny Chance = 0.1465% or approximately 1/683");
+        staticMasuda6.setText("Shiny Chance = 0.1464% or approximately 1/683");
         staticMasuda6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         staticMasuda6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -861,7 +861,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(staticFriendSafari);
-        staticFriendSafari.setText("Shiny Chance = 0.1221% or approximately 1/819");
+        staticFriendSafari.setText("Shiny Chance = 0.122% or approximately 1/820");
         staticFriendSafari.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         staticFriendSafari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -870,7 +870,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(staticHorde);
-        staticHorde.setText("Shiny Chance = 0.1219% or approximately 1/820");
+        staticHorde.setText("Shiny Chance = 0.122% or approximately 1/820");
         staticHorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         staticHorde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1025,7 +1025,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(shinyMasuda6);
-        shinyMasuda6.setText("Shiny Chance = 0.1953% or approximately 1/512");
+        shinyMasuda6.setText("Shiny Chance = 0.1951% or approximately 1/512");
         shinyMasuda6.setFocusable(false);
         shinyMasuda6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shinyMasuda6.addActionListener(new java.awt.event.ActionListener() {
@@ -1035,7 +1035,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(shinyFriendSafari);
-        shinyFriendSafari.setText("Shiny Chance = 0.1709% or approximately 1/585");
+        shinyFriendSafari.setText("Shiny Chance = 0.1708% or approximately 1/586");
         shinyFriendSafari.setFocusable(false);
         shinyFriendSafari.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shinyFriendSafari.addActionListener(new java.awt.event.ActionListener() {
@@ -1045,7 +1045,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         });
 
         staticButtonGroup.add(shinyHorde);
-        shinyHorde.setText("Shiny Chance = 0.3655% or approximately 1/274");
+        shinyHorde.setText("Shiny Chance = 0.3656% or approximately 1/274");
         shinyHorde.setFocusable(false);
         shinyHorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shinyHorde.addActionListener(new java.awt.event.ActionListener() {
@@ -1457,7 +1457,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         staticChance = 683;
     }//GEN-LAST:event_staticMasuda6ActionPerformed
     private void staticFriendSafariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticFriendSafariActionPerformed
-        staticChance = 819;
+        staticChance = 820;
     }//GEN-LAST:event_staticFriendSafariActionPerformed
     private void staticHordeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticHordeActionPerformed
         staticChance = 820;
@@ -1475,7 +1475,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         staticChance = 512;
     }//GEN-LAST:event_shinyMasuda6ActionPerformed
     private void shinyFriendSafariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyFriendSafariActionPerformed
-        staticChance = 585;
+        staticChance = 586;
     }//GEN-LAST:event_shinyFriendSafariActionPerformed
     private void shinyHordeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyHordeActionPerformed
         staticChance = 274;
@@ -1904,6 +1904,30 @@ public class ShinyHunting extends javax.swing.JFrame {
         fileOutput("text_output\\encounters.txt", String.valueOf(cCount));
         fileOutput("text_output\\shiny_chance.txt", "1/" + cChance);
         fileOutput("text_output\\cumulative.txt", String.valueOf(fourDec.format(cumulativeCalculate(cDec, cCount) * 100)) + "%");
+    }
+
+    // Code to quickly manually calculate cumulative percentages
+    public void testCumulative() {
+        int testChance = 4096;
+        int testEncounters = 3;
+        int testHordeEncounters = 5;
+        boolean testDoubleFlag = false;
+
+        // Normal Calculation
+        double testNum = cumulativeCalculate(1.0 / testChance, testEncounters) * 100;
+        double testPercent = 1.0 / testNum * 100;
+
+        // Double (Charm + Horde) Calculation
+        double testHorde = cumulativeCalculate(1.0 / testPercent, testHordeEncounters) * 100;
+        double testHordePercent = 1.0 / testHorde * 100;
+
+        System.out.println(testNum);
+        System.out.println("1/" + testPercent);
+
+        if (testDoubleFlag) {
+            System.out.println(testHorde);
+            System.out.println("1/" + testHordePercent);
+        }
     }
 
     // Output to text file with file name and text as Strings
