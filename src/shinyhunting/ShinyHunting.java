@@ -14,13 +14,13 @@ public class ShinyHunting extends javax.swing.JFrame {
     public ShinyHunting() {
         initComponents();
     }
-    
+
     // Initialise variables
     int dNChain = 0, dNCount = 0;
     int fChain = 0, sChain = 0;
     int gscCount = 0;
     double gsc1male = 50, gsc1female = 50, gsc2male = 50, gsc2female = 50;
-    int cCount = 0, cChance = 8192;
+    int cCount = 0, cChance = 8192, staticChance = 8192, shinyChance = 2731;
     private static DecimalFormat noDec = new DecimalFormat("#");
     private static DecimalFormat fourDec = new DecimalFormat("#.####");
 
@@ -28,6 +28,7 @@ public class ShinyHunting extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        staticButtonGroup = new javax.swing.ButtonGroup();
         tabs = new javax.swing.JTabbedPane();
         dexNav = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -81,10 +82,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         gscPlus = new javax.swing.JButton();
         gscReset = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        staticOdds = new javax.swing.JPanel();
-        normalCharm = new javax.swing.JCheckBox();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        miscText = new javax.swing.JTextArea();
         custom = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         customCount = new javax.swing.JTextField();
@@ -95,6 +92,38 @@ public class ShinyHunting extends javax.swing.JFrame {
         customText = new javax.swing.JTextArea();
         customChance = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        staticOdds = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        staticNormal2to5 = new javax.swing.JRadioButton();
+        staticNormal6 = new javax.swing.JRadioButton();
+        staticMasuda4 = new javax.swing.JRadioButton();
+        staticMasuda5 = new javax.swing.JRadioButton();
+        staticMasuda6 = new javax.swing.JRadioButton();
+        staticFriendSafari = new javax.swing.JRadioButton();
+        staticHorde = new javax.swing.JRadioButton();
+        staticCharm = new javax.swing.JCheckBox();
+        staticImport = new javax.swing.JButton();
+        shinyOdds = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        shinyNormal2to5 = new javax.swing.JRadioButton();
+        shinyNormal6 = new javax.swing.JRadioButton();
+        shinyMasuda5 = new javax.swing.JRadioButton();
+        shinyMasuda6 = new javax.swing.JRadioButton();
+        shinyFriendSafari = new javax.swing.JRadioButton();
+        shinyHorde = new javax.swing.JRadioButton();
+        shinyCharm = new javax.swing.JCheckBox();
+        shinyImport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Shiny Hunting Assistant v0.3 - Created by A Cheap Lemon");
@@ -646,44 +675,6 @@ public class ShinyHunting extends javax.swing.JFrame {
 
         tabs.addTab("Gen II Breeding", gscBreed);
 
-        normalCharm.setText("Shiny Charm");
-        normalCharm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        normalCharm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                normalCharmActionPerformed(evt);
-            }
-        });
-
-        miscText.setColumns(20);
-        miscText.setLineWrap(true);
-        miscText.setRows(5);
-        miscText.setText("Normal Encounters/Soft Resets (Gen 2-5)\nShiny Chance = 0.0122% or approximately 1/8192\n\nNormal Encounters/Soft Resets (Gen 6+)\nShiny Chance = 0.0244% or approximately 1/4096\n\nMasuda Method (Gen 4)\nShiny Chance = 0.061% or approximately 1/1639\n\nMasuda Method (Gen 5)\nShiny Chance = 0.0732% or approximately 1/1366\n\nMasuda Method (Gen 6+)\nShiny Chance = 0.1465% or approximately 1/683\n\nFriend Safari\nShiny Chance = 0.1221% or approximately 1/819\n\nHorde Encounters\nShiny Chance = 0.1219% or approximately 1/820");
-        miscText.setWrapStyleWord(true);
-        jScrollPane6.setViewportView(miscText);
-
-        javax.swing.GroupLayout staticOddsLayout = new javax.swing.GroupLayout(staticOdds);
-        staticOdds.setLayout(staticOddsLayout);
-        staticOddsLayout.setHorizontalGroup(
-            staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staticOddsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
-                    .addComponent(normalCharm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        staticOddsLayout.setVerticalGroup(
-            staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staticOddsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(normalCharm)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        tabs.addTab("Static Odds", staticOdds);
-
         custom.setMaximumSize(new java.awt.Dimension(328, 92));
         custom.setMinimumSize(new java.awt.Dimension(328, 92));
 
@@ -745,23 +736,26 @@ public class ShinyHunting extends javax.swing.JFrame {
                 .addGroup(customLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(customLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(customChance, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(customLayout.createSequentialGroup()
                         .addGap(0, 144, Short.MAX_VALUE)
-                        .addGroup(customLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(customLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(customCount, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(customMinus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(customPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(customReset, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(customLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(customChance, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(customCount, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(customMinus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(customPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 144, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(customLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(customReset, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         customLayout.setVerticalGroup(
             customLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -778,12 +772,373 @@ public class ShinyHunting extends javax.swing.JFrame {
                     .addComponent(customChance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(customReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         tabs.addTab("Custom", custom);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Normal Encounters/Soft Resets (Gen 2-5)");
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Normal Encounters/Soft Resets (Gen 6+)");
+        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Masuda Method (Gen 4)");
+        jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Masuda Method (Gen 5)");
+        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Masuda Method (Gen 6+)");
+        jLabel20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Friend Safari (XY)");
+        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Horde Encounters (Gen 6)");
+        jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        staticButtonGroup.add(staticNormal2to5);
+        staticNormal2to5.setSelected(true);
+        staticNormal2to5.setText("Shiny Chance = 0.0122% or approximately 1/8192");
+        staticNormal2to5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticNormal2to5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticNormal2to5ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticNormal6);
+        staticNormal6.setText("Shiny Chance = 0.0244% or approximately 1/4096");
+        staticNormal6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticNormal6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticNormal6ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticMasuda4);
+        staticMasuda4.setText("Shiny Chance = 0.061% or approximately 1/1639");
+        staticMasuda4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticMasuda4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticMasuda4ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticMasuda5);
+        staticMasuda5.setText("Shiny Chance = 0.0732% or approximately 1/1366");
+        staticMasuda5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticMasuda5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticMasuda5ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticMasuda6);
+        staticMasuda6.setText("Shiny Chance = 0.1465% or approximately 1/683");
+        staticMasuda6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticMasuda6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticMasuda6ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticFriendSafari);
+        staticFriendSafari.setText("Shiny Chance = 0.1221% or approximately 1/819");
+        staticFriendSafari.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticFriendSafari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticFriendSafariActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(staticHorde);
+        staticHorde.setText("Shiny Chance = 0.1219% or approximately 1/820");
+        staticHorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        staticHorde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticHordeActionPerformed(evt);
+            }
+        });
+
+        staticCharm.setText("Shiny Charm");
+        staticCharm.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        staticCharm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticCharmActionPerformed(evt);
+            }
+        });
+
+        staticImport.setText("Import to Custom Tab");
+        staticImport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staticImportActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout staticOddsLayout = new javax.swing.GroupLayout(staticOdds);
+        staticOdds.setLayout(staticOddsLayout);
+        staticOddsLayout.setHorizontalGroup(
+            staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(staticOddsLayout.createSequentialGroup()
+                .addContainerGap(147, Short.MAX_VALUE)
+                .addGroup(staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(staticMasuda5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticMasuda4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticNormal6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticNormal2to5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticMasuda6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticFriendSafari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticHorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
+            .addGroup(staticOddsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(staticImport)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(staticOddsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(staticCharm)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        staticOddsLayout.setVerticalGroup(
+            staticOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(staticOddsLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(staticCharm)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticNormal2to5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticNormal6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticMasuda4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticMasuda5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticMasuda6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticFriendSafari)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticHorde)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(staticImport)
+                .addGap(50, 50, 50))
+        );
+
+        tabs.addTab("Static Shiny Odds", staticOdds);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Normal Encounters/Soft Resets (B2W2)");
+        jLabel14.setFocusable(false);
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Normal Encounters/Soft Resets (Gen 6+)");
+        jLabel21.setFocusable(false);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("Masuda Method (B2W2)");
+        jLabel23.setFocusable(false);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Masuda Method (Gen 6+)");
+        jLabel24.setFocusable(false);
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Friend Safari (XY)");
+        jLabel25.setFocusable(false);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Horde Encounters (Gen 6)");
+        jLabel26.setFocusable(false);
+
+        staticButtonGroup.add(shinyNormal2to5);
+        shinyNormal2to5.setText("Shiny Chance = 0.0366% or approximately 1/2731");
+        shinyNormal2to5.setFocusable(false);
+        shinyNormal2to5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyNormal2to5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyNormal2to5ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(shinyNormal6);
+        shinyNormal6.setText("Shiny Chance = 0.0732% or approximately 1/1366");
+        shinyNormal6.setFocusable(false);
+        shinyNormal6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyNormal6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyNormal6ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(shinyMasuda5);
+        shinyMasuda5.setText("Shiny Chance = 0.0976% or approximately 1/1024");
+        shinyMasuda5.setFocusable(false);
+        shinyMasuda5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyMasuda5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyMasuda5ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(shinyMasuda6);
+        shinyMasuda6.setText("Shiny Chance = 0.1953% or approximately 1/512");
+        shinyMasuda6.setFocusable(false);
+        shinyMasuda6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyMasuda6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyMasuda6ActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(shinyFriendSafari);
+        shinyFriendSafari.setText("Shiny Chance = 0.1709% or approximately 1/585");
+        shinyFriendSafari.setFocusable(false);
+        shinyFriendSafari.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyFriendSafari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyFriendSafariActionPerformed(evt);
+            }
+        });
+
+        staticButtonGroup.add(shinyHorde);
+        shinyHorde.setText("Shiny Chance = 0.3655% or approximately 1/274");
+        shinyHorde.setFocusable(false);
+        shinyHorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyHorde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyHordeActionPerformed(evt);
+            }
+        });
+
+        shinyCharm.setSelected(true);
+        shinyCharm.setText("Shiny Charm");
+        shinyCharm.setFocusable(false);
+        shinyCharm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shinyCharm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyCharmActionPerformed(evt);
+            }
+        });
+
+        shinyImport.setText("Import to Custom Tab");
+        shinyImport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shinyImportActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout shinyOddsLayout = new javax.swing.GroupLayout(shinyOdds);
+        shinyOdds.setLayout(shinyOddsLayout);
+        shinyOddsLayout.setHorizontalGroup(
+            shinyOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shinyOddsLayout.createSequentialGroup()
+                .addContainerGap(148, Short.MAX_VALUE)
+                .addGroup(shinyOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(shinyNormal2to5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shinyNormal6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shinyMasuda5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shinyMasuda6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shinyFriendSafari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shinyHorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
+            .addGroup(shinyOddsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(shinyCharm)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(shinyOddsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(shinyImport)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        shinyOddsLayout.setVerticalGroup(
+            shinyOddsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shinyOddsLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(shinyCharm)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyNormal2to5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyNormal6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyMasuda5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyMasuda6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyFriendSafari)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shinyHorde)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(shinyImport)
+                .addGap(50, 50, 50))
+        );
+
+        tabs.addTab("Static Shiny Odds", shinyOdds);
+
+        staticOdds.setName("Static Shiny Odds");
+        shinyOdds.setName("Static Shiny Odds");
+        tabs.remove(shinyOdds);
 
         getContentPane().add(tabs);
 
@@ -798,13 +1153,11 @@ public class ShinyHunting extends javax.swing.JFrame {
         customChance.setText(String.valueOf(cChance));
         cRecalculate();
     }//GEN-LAST:event_customChanceActionPerformed
-
     private void customResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customResetActionPerformed
         cCount = 0;
         customCount.setText("0");
         cRecalculate();
     }//GEN-LAST:event_customResetActionPerformed
-
     private void customPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customPlusActionPerformed
         cCount++;
         if (cCount > 999999) {
@@ -813,7 +1166,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         customCount.setText(String.valueOf(cCount));
         cRecalculate();
     }//GEN-LAST:event_customPlusActionPerformed
-
     private void customMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customMinusActionPerformed
         if (cCount > 0) {
             cCount--;
@@ -821,7 +1173,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         customCount.setText(String.valueOf(cCount));
         cRecalculate();
     }//GEN-LAST:event_customMinusActionPerformed
-
     private void customCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customCountActionPerformed
         if (Double.parseDouble(customCount.getText()) > 999999) {
             cCount = 999999;
@@ -835,47 +1186,11 @@ public class ShinyHunting extends javax.swing.JFrame {
         cRecalculate();
     }//GEN-LAST:event_customCountActionPerformed
 
-    private void normalCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalCharmActionPerformed
-        double chance = (1 - Math.pow(1 - 0.000244, 5)) * 100;
-        double charmChance = (1 - Math.pow(1 - 0.000732, 5)) * 100;
-
-        if (normalCharm.isSelected()) {
-            miscText.setText("Normal Encounters/Soft Resets (B2W2)\n"
-                    + "Shiny Chance = 0.0366% or approximately 1/2731\n\n"
-                    + "Normal Encounters/Soft Resets (Gen 6+)\n"
-                    + "Shiny Chance = 0.0732% or approximately 1/1366\n\n"
-                    + "Masuda Method (B2W2)\n"
-                    + "Shiny Chance = 0.0976% or approximately 1/1024\n\n"
-                    + "Masuda Method (Gen 6+)\n"
-                    + "Shiny Chance = 0.1953% or approximately 1/512\n\n"
-                    + "Friend Safari\n"
-                    + "Shiny Chance = 0.1709% or approximately 1/585\n\n"
-                    + "Horde Encounters\n"
-                    + "Shiny Chance = " + String.valueOf(fourDec.format(charmChance)) + "% or approximately 1/" + Math.round(1.0 / (charmChance) * 100));
-        } else {
-            miscText.setText("Normal Encounters/Soft Resets (Gen 2-5)\n"
-                    + "Shiny Chance = 0.0122% or approximately 1/8192\n\n"
-                    + "Normal Encounters/Soft Resets (Gen 6+)\n"
-                    + "Shiny Chance = 0.0244% or approximately 1/4096\n\n"
-                    + "Masuda Method (Gen 4)\n"
-                    + "Shiny Chance = 0.061% or approximately 1/1639\n\n"
-                    + "Masuda Method (Gen 5)\n"
-                    + "Shiny Chance = 0.0732% or approximately 1/1366\n\n"
-                    + "Masuda Method (Gen 6+)\n"
-                    + "Shiny Chance = 0.1465% or approximately 1/683\n\n"
-                    + "Friend Safari\n"
-                    + "Shiny Chance = 0.1221% or approximately 1/819\n\n"
-                    + "Horde Encounters\n"
-                    + "Shiny Chance = " + String.valueOf(fourDec.format(chance)) + "% or approximately 1/" + Math.round(1.0 / (chance) * 100));
-        }
-    }//GEN-LAST:event_normalCharmActionPerformed
-
     private void fishingResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishingResetActionPerformed
         fChain = 0;
         fishingChain.setText("0");
         fRecalculate();
     }//GEN-LAST:event_fishingResetActionPerformed
-
     private void fishingPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishingPlusActionPerformed
         fChain++;
         if (fChain > 99999) {
@@ -884,7 +1199,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         fishingChain.setText(String.valueOf(fChain));
         fRecalculate();
     }//GEN-LAST:event_fishingPlusActionPerformed
-
     private void fishingMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishingMinusActionPerformed
         if (fChain > 0) {
             fChain--;
@@ -892,11 +1206,9 @@ public class ShinyHunting extends javax.swing.JFrame {
         fishingChain.setText(String.valueOf(fChain));
         fRecalculate();
     }//GEN-LAST:event_fishingMinusActionPerformed
-
     private void fishingCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishingCharmActionPerformed
         fRecalculate();
     }//GEN-LAST:event_fishingCharmActionPerformed
-
     private void fishingChainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishingChainActionPerformed
         if (Double.parseDouble(fishingChain.getText()) > 99999) {
             fChain = 99999;
@@ -913,19 +1225,16 @@ public class ShinyHunting extends javax.swing.JFrame {
     private void dexNavCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavCharmActionPerformed
         dNRecalculate();
     }//GEN-LAST:event_dexNavCharmActionPerformed
-
     private void dexNavCounterResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavCounterResetActionPerformed
         dNCount = 0;
         dexNavCounter.setText("0");
         dNRecalculate();
     }//GEN-LAST:event_dexNavCounterResetActionPerformed
-
     private void dexNavChainResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavChainResetActionPerformed
         dNChain = 0;
         dexNavChain.setText("0");
         dNRecalculate();
     }//GEN-LAST:event_dexNavChainResetActionPerformed
-
     private void dexNavPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavPlusActionPerformed
         dNChain++;
         dNCount++;
@@ -939,7 +1248,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         dexNavCounter.setText(String.valueOf(dNCount));
         dNRecalculate();
     }//GEN-LAST:event_dexNavPlusActionPerformed
-
     private void dexNavCounterMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavCounterMinusActionPerformed
         if (dNCount > 0) {
             dNCount--;
@@ -947,7 +1255,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         dexNavCounter.setText(String.valueOf(dNCount));
         dNRecalculate();
     }//GEN-LAST:event_dexNavCounterMinusActionPerformed
-
     private void dexNavChainMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavChainMinusActionPerformed
         if (dNChain > 0) {
             dNChain--;
@@ -955,7 +1262,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         dexNavChain.setText(String.valueOf(dNChain));
         dNRecalculate();
     }//GEN-LAST:event_dexNavChainMinusActionPerformed
-
     private void dexNavCounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavCounterActionPerformed
         if (Double.parseDouble(dexNavCounter.getText()) > 999) {
             dNCount = 999;
@@ -967,7 +1273,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         dexNavCounter.setText(String.valueOf(dNCount));
         dNRecalculate();
     }//GEN-LAST:event_dexNavCounterActionPerformed
-
     private void dexNavChainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavChainActionPerformed
         if (Double.parseDouble(dexNavChain.getText()) > 99999) {
             dNChain = 99999;
@@ -984,7 +1289,6 @@ public class ShinyHunting extends javax.swing.JFrame {
     private void gsc1ShinyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc1ShinyActionPerformed
         gscRecalculate();
     }//GEN-LAST:event_gsc1ShinyActionPerformed
-
     private void gsc2MaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc2MaleActionPerformed
         if (Double.parseDouble(gsc2Male.getText()) > 100) {
             gsc2male = 100;
@@ -997,7 +1301,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         gsc2Female.setText(String.valueOf(100 - gsc2male));
         gscRecalculate();
     }//GEN-LAST:event_gsc2MaleActionPerformed
-
     private void gsc2FemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc2FemaleActionPerformed
         if (Double.parseDouble(gsc2Female.getText()) > 100) {
             gsc2female = 100;
@@ -1010,19 +1313,15 @@ public class ShinyHunting extends javax.swing.JFrame {
         gsc2Male.setText(String.valueOf(100 - gsc2female));
         gscRecalculate();
     }//GEN-LAST:event_gsc2FemaleActionPerformed
-
     private void gsc2DittoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc2DittoActionPerformed
         gscRecalculate();
     }//GEN-LAST:event_gsc2DittoActionPerformed
-
     private void gsc2ShinyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc2ShinyActionPerformed
         gscRecalculate();
     }//GEN-LAST:event_gsc2ShinyActionPerformed
-
     private void gsc1DittoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gsc1DittoActionPerformed
         gscRecalculate();
     }//GEN-LAST:event_gsc1DittoActionPerformed
-
     private void gscCounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gscCounterActionPerformed
         if (Double.parseDouble(gscCounter.getText()) > 99999) {
             gscCount = 99999;
@@ -1035,7 +1334,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         gscCounter.setText(String.valueOf(gscCount));
         gscRecalculate();
     }//GEN-LAST:event_gscCounterActionPerformed
-
     private void gscMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gscMinusActionPerformed
         if (gscCount > 0) {
             gscCount--;
@@ -1043,7 +1341,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         gscCounter.setText(String.valueOf(gscCount));
         gscRecalculate();
     }//GEN-LAST:event_gscMinusActionPerformed
-
     private void gscPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gscPlusActionPerformed
         gscCount++;
         if (gscCount > 99999) {
@@ -1052,7 +1349,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         gscCounter.setText(String.valueOf(gscCount));
         gscRecalculate();
     }//GEN-LAST:event_gscPlusActionPerformed
-
     private void gscResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gscResetActionPerformed
         gscCount = 0;
         gscCounter.setText(String.valueOf(gscCount));
@@ -1067,7 +1363,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         dexNavChain.setText(String.valueOf(dNChain));
         dNRecalculate();
     }//GEN-LAST:event_dexNavChainPlusSActionPerformed
-
     private void dexNavCounterPlusSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexNavCounterPlusSActionPerformed
         dNCount++;
         if (dNCount > 999) {
@@ -1080,13 +1375,11 @@ public class ShinyHunting extends javax.swing.JFrame {
     private void sosCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sosCharmActionPerformed
         sRecalculate();
     }//GEN-LAST:event_sosCharmActionPerformed
-
     private void sosResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sosResetActionPerformed
         sChain = 0;
         sosChain.setText("0");
         sRecalculate();
     }//GEN-LAST:event_sosResetActionPerformed
-
     private void sosPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sosPlusActionPerformed
         sChain++;
         if (sChain > 99999) {
@@ -1095,7 +1388,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         sosChain.setText(String.valueOf(sChain));
         sRecalculate();
     }//GEN-LAST:event_sosPlusActionPerformed
-
     private void sosMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sosMinusActionPerformed
         if (sChain > 0) {
             sChain--;
@@ -1103,7 +1395,6 @@ public class ShinyHunting extends javax.swing.JFrame {
         sosChain.setText(String.valueOf(sChain));
         sRecalculate();
     }//GEN-LAST:event_sosMinusActionPerformed
-
     private void sosChainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sosChainActionPerformed
         if (Double.parseDouble(sosChain.getText()) > 99999) {
             sChain = 99999;
@@ -1116,6 +1407,79 @@ public class ShinyHunting extends javax.swing.JFrame {
         sosChain.setText(String.valueOf(sChain));
         sRecalculate();
     }//GEN-LAST:event_sosChainActionPerformed
+
+    private void staticCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticCharmActionPerformed
+        staticCharm.setSelected(false);
+        tabs.remove(staticOdds);
+        tabs.add(shinyOdds);
+        shinyCharm.setSelected(true);
+        shinyOdds.setName("Static Shiny Odds");
+        shinyNormal2to5.setSelected(true);
+        staticChance = 2731;
+        tabs.setSelectedComponent(shinyOdds);
+    }//GEN-LAST:event_staticCharmActionPerformed
+    private void shinyCharmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyCharmActionPerformed
+        shinyCharm.setSelected(true);
+        tabs.remove(shinyOdds);
+        tabs.add(staticOdds);
+        staticCharm.setSelected(false);
+        staticOdds.setName("Static Shiny Odds");
+        staticNormal2to5.setSelected(true);
+        staticChance = 8192;
+        tabs.setSelectedComponent(staticOdds);
+    }//GEN-LAST:event_shinyCharmActionPerformed
+    private void staticImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticImportActionPerformed
+        cChance = staticChance;
+        customChance.setText(String.valueOf(cChance));
+        cRecalculate();
+        tabs.setSelectedComponent(custom);
+    }//GEN-LAST:event_staticImportActionPerformed
+    private void shinyImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyImportActionPerformed
+        cChance = staticChance;
+        customChance.setText(String.valueOf(cChance));
+        cRecalculate();
+        tabs.setSelectedComponent(custom);
+    }//GEN-LAST:event_shinyImportActionPerformed
+
+    private void staticNormal2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticNormal2to5ActionPerformed
+        staticChance = 8192;
+    }//GEN-LAST:event_staticNormal2to5ActionPerformed
+    private void staticNormal6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticNormal6ActionPerformed
+        staticChance = 4096;
+    }//GEN-LAST:event_staticNormal6ActionPerformed
+    private void staticMasuda4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticMasuda4ActionPerformed
+        staticChance = 1639;
+    }//GEN-LAST:event_staticMasuda4ActionPerformed
+    private void staticMasuda5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticMasuda5ActionPerformed
+        staticChance = 1366;
+    }//GEN-LAST:event_staticMasuda5ActionPerformed
+    private void staticMasuda6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticMasuda6ActionPerformed
+        staticChance = 683;
+    }//GEN-LAST:event_staticMasuda6ActionPerformed
+    private void staticFriendSafariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticFriendSafariActionPerformed
+        staticChance = 819;
+    }//GEN-LAST:event_staticFriendSafariActionPerformed
+    private void staticHordeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staticHordeActionPerformed
+        staticChance = 820;
+    }//GEN-LAST:event_staticHordeActionPerformed
+    private void shinyNormal2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyNormal2to5ActionPerformed
+        staticChance = 2731;
+    }//GEN-LAST:event_shinyNormal2to5ActionPerformed
+    private void shinyNormal6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyNormal6ActionPerformed
+        staticChance = 1366;
+    }//GEN-LAST:event_shinyNormal6ActionPerformed
+    private void shinyMasuda5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyMasuda5ActionPerformed
+        staticChance = 1024;
+    }//GEN-LAST:event_shinyMasuda5ActionPerformed
+    private void shinyMasuda6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyMasuda6ActionPerformed
+        staticChance = 512;
+    }//GEN-LAST:event_shinyMasuda6ActionPerformed
+    private void shinyFriendSafariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyFriendSafariActionPerformed
+        staticChance = 585;
+    }//GEN-LAST:event_shinyFriendSafariActionPerformed
+    private void shinyHordeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shinyHordeActionPerformed
+        staticChance = 274;
+    }//GEN-LAST:event_shinyHordeActionPerformed
 
     // Find out [n] events with [p] probability that give an overall probability of [q]
     public double distributionCalculate(double p, double q) {
@@ -1408,7 +1772,7 @@ public class ShinyHunting extends javax.swing.JFrame {
                 + "Chain At 50% Chance = " + chance50 + "\n"
                 + "Chain At 90% Chance = " + chance90 + "\n"
                 + "Cumulative % = " + String.valueOf(fourDec.format(cumulativeCalculate(avgActual, fChain) * 100)) + "%");
-        
+
         fileOutput("text_output\\hunt_type.txt", "Chain Fishing");
         fileOutput("text_output\\encounters.txt", String.valueOf(fChain));
         fileOutput("text_output\\shiny_chance.txt", "1/" + Math.round(1.0 / (actual)));
@@ -1464,7 +1828,7 @@ public class ShinyHunting extends javax.swing.JFrame {
                 + "Cumulative % = " + String.valueOf(fourDec.format(cumulativeCalculate(avgActual, sChain) * 100)) + "%\n\n"
                 + "Minimum Perfect IVs = " + ivs + "\n"
                 + "Hidden Ability Chance = " + ha + "%");
-        
+
         fileOutput("text_output\\hunt_type.txt", "SOS Chaining");
         fileOutput("text_output\\encounters.txt", String.valueOf(sChain));
         fileOutput("text_output\\shiny_chance.txt", "1/" + Math.round(1.0 / (actual)));
@@ -1519,7 +1883,7 @@ public class ShinyHunting extends javax.swing.JFrame {
                     + "Eggs Until 90% Chance = " + String.valueOf(noDec.format(Math.ceil(distributionCalculate((1.0 / gscChance), 0.9)))) + "\n"
                     + "Cumulative % = " + String.valueOf(fourDec.format(cumulativeCalculate(1.0 / gscChance, gscCount) * 100)));
         }
-        
+
         fileOutput("text_output\\encounters.txt", String.valueOf(gscCount));
         fileOutput("text_output\\shiny_chance.txt", "1/" + Math.round(gscChance));
         fileOutput("text_output\\cumulative.txt", String.valueOf(fourDec.format(cumulativeCalculate(1.0 / gscChance, gscCount) * 100)) + "%");
@@ -1535,7 +1899,7 @@ public class ShinyHunting extends javax.swing.JFrame {
                 + "Encounters Until 50% Chance = " + String.valueOf(noDec.format(Math.ceil(distributionCalculate((1.0 / cChance), 0.5)))) + "\n"
                 + "Encounters Until 90% Chance = " + String.valueOf(noDec.format(Math.ceil(distributionCalculate((1.0 / cChance), 0.9)))) + "\n"
                 + "Cumulative % = " + String.valueOf(fourDec.format(cumulativeCalculate(cDec, cCount) * 100)));
-        
+
         fileOutput("text_output\\hunt_type.txt", "Random Encounters/Soft Resets/Breeding");
         fileOutput("text_output\\encounters.txt", String.valueOf(cCount));
         fileOutput("text_output\\shiny_chance.txt", "1/" + cChance);
@@ -1619,21 +1983,40 @@ public class ShinyHunting extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextArea miscText;
-    private javax.swing.JCheckBox normalCharm;
+    private javax.swing.JCheckBox shinyCharm;
+    private javax.swing.JRadioButton shinyFriendSafari;
+    private javax.swing.JRadioButton shinyHorde;
+    private javax.swing.JButton shinyImport;
+    private javax.swing.JRadioButton shinyMasuda5;
+    private javax.swing.JRadioButton shinyMasuda6;
+    private javax.swing.JRadioButton shinyNormal2to5;
+    private javax.swing.JRadioButton shinyNormal6;
+    public javax.swing.JPanel shinyOdds;
     private javax.swing.JTextField sosChain;
     private javax.swing.JPanel sosChaining;
     private javax.swing.JCheckBox sosCharm;
@@ -1641,7 +2024,17 @@ public class ShinyHunting extends javax.swing.JFrame {
     private javax.swing.JButton sosPlus;
     private javax.swing.JButton sosReset;
     private javax.swing.JTextArea sosText;
-    private javax.swing.JPanel staticOdds;
-    private javax.swing.JTabbedPane tabs;
+    private javax.swing.ButtonGroup staticButtonGroup;
+    private javax.swing.JCheckBox staticCharm;
+    private javax.swing.JRadioButton staticFriendSafari;
+    private javax.swing.JRadioButton staticHorde;
+    private javax.swing.JButton staticImport;
+    private javax.swing.JRadioButton staticMasuda4;
+    private javax.swing.JRadioButton staticMasuda5;
+    private javax.swing.JRadioButton staticMasuda6;
+    private javax.swing.JRadioButton staticNormal2to5;
+    private javax.swing.JRadioButton staticNormal6;
+    public javax.swing.JPanel staticOdds;
+    public javax.swing.JTabbedPane tabs;
     // End of variables declaration//GEN-END:variables
 }
