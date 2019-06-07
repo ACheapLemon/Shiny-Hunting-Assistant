@@ -126,7 +126,7 @@ public class ShinyHunting extends javax.swing.JFrame {
         shinyImport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Shiny Hunting Assistant v0.3 - Created by A Cheap Lemon");
+        setTitle("Shiny Hunting Assistant v0.4 - Created by A Cheap Lemon");
         setMinimumSize(new java.awt.Dimension(400, 600));
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 

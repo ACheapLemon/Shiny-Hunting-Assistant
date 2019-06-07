@@ -7,7 +7,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Shiny Hunting Assistant v0.3 - Created by A Cheap Lemon"/>
+    <Property name="title" type="java.lang.String" value="Shiny Hunting Assistant v0.4 - Created by A Cheap Lemon"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[400, 600]"/>
     </Property>
